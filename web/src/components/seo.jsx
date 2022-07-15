@@ -16,7 +16,7 @@ function Seo({ description, lang, meta, keywords, title, image }) {
         const siteTitle = (data.site && data.site.title) || "";
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || "";
         const metaImage =
-          data.site.openGraph.image && data.site.openGraph.image.asset
+          data.site.openGraph && data.site.openGraph.image && data.site.openGraph.image.asset
             ? imageUrlFor(buildImageObj(data.site.openGraph.image))
                 .width(1200)
                 .url()
